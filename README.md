@@ -1,7 +1,7 @@
 # High Performance C++ Queues
 High performance C++ implementation of producer/consumer queue architecture
 
-## What is fundamental to this implementation
+## Fundamentals to this implementation
 * the group of consumers and the group of producers do not synchronize between each other
 * choose either single or multi-threaded producers
 * choose either single or multi-threaded consumers
