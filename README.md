@@ -12,5 +12,5 @@ High performance C++ implementation of producer/consumer queue architecture
 
 ### Platforms
 * Written in portable code for all platforms
-* In a couple of spots uses g++ atomic built-ins __sync_lock_test_and_set and __sync_fetch_and_add, see  https://gcc.gnu.org/onlinedocs/gcc-4.4.5/gcc/Atomic-Builtins.html
-* Developed in Eclipse on Linux using Eclipse CDT and g++, you can import it into your Eclipse environment
+* In a couple of spots it uses g++ atomic built-ins __sync_lock_test_and_set and __sync_fetch_and_add, see [atomic built-ins documentation](https://gcc.gnu.org/onlinedocs/gcc-4.4.5/gcc/Atomic-Builtins.html)
+* Developed in Eclipse Mars 2 on Linux using Eclipse CDT and compiling with g++, it can be easily imported into an Eclipse workspace
