@@ -5,7 +5,7 @@ High performance C++ implementation of producer/consumer queue architecture
 * the group of consumers and the group of producers do not synchronize between each other.  Contention takes place only when the queue is empty to notify the readers when the queue becomes non-empty.  Otherwise, the readers and writers operate with no contention.
 * choose either single or multi-threaded producers
 * choose either single or multi-threaded consumers
-* memory allocations are minimized or avoided entirely: addition to the queues is done by assignment copying (especially useful for stack allocated objects and especially useful to avoid reference counting or other memory tracking).  Removals from the queue are non-copy: they simply use a reference to the entry in the queue itself, and increment a queue counter when done to free up the queue location.
+* memory allocations are minimized or avoided entirely: addition to the queues is done by assignment copying (especially useful for stack-allocated objects and also especially useful to avoid reference counting or other memory tracking).  Removals from the queue are non-copy: they simply use a reference to the entry in the queue itself, and increment a queue counter when done to free up the queue entry.
 * The queues are circular but resize as necessary if consumers are not keeping pace with producers, up until a max size limit upon which the producers will block as necessary
 * designed to be fast
 * easy to customize to enqueue any data types.  
