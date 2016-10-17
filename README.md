@@ -13,6 +13,8 @@ High performance C++ implementation of producer/consumer queue architecture
 ## Sample code
 See the [sample](https://github.com/seancfoley/High-Performance-CPP-Queues/tree/master/ProcessingQueues/src/sample) folder for an implementation using two data types that can be enqueued (SampleQueueEntry1 and 2), and some test code which starts up writer threads, a queue processor engine with multiple readers, a single consumer class SampleQueueEntryConsumer used by the queue consumer threads, and adds numerous entries to the queue for consumption in testQueues.  The sample code makes use of the [consumer folder](https://github.com/seancfoley/High-Performance-CPP-Queues/tree/master/ProcessingQueues/src/consumer), which includes a QueueProcessor engine which contains a queue (by default multi-reader and multi-writer) and also manages a set of consumer threads to pull entries off the queue.
 
+For the queues themselves, all you need is the base and queue source folders.  The consumer folder is optional, containing code to maintain a set of queue consumer worker threads, requiring the basic wrapper classes in the threading source folder.  Finally, the sample folder shows how to pull it all together.
+
 ### Platforms
 * Written in portable code for all platforms
 * In a couple of spots it uses g++ atomic built-ins __sync_lock_test_and_set and __sync_fetch_and_add, see [atomic built-ins documentation](https://gcc.gnu.org/onlinedocs/gcc-4.4.5/gcc/Atomic-Builtins.html)
