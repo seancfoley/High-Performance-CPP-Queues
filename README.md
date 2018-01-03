@@ -10,7 +10,7 @@ High performance C++ implementation of producer/consumer queue architecture
 * designed to be fast
 * easy to customize to enqueue any data types.  
 
-##Source folders
+## Source folders
 
 For the queues themselves, all you need is the base and queue source folders, as well as the threading folder which contains basic wrappers for mutexes and conditional variables.  The consumer folder is optional, containing code to maintain a set of queue consumer worker threads, also requiring the thread wrapper class in the threading source folder.  Finally, the sample folder is sample code showing how to pull it all together.
 
